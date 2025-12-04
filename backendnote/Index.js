@@ -18,6 +18,12 @@ app.use(cookieParse());
 app.use("/api/usernotes", Notesrouter);
 app.use("/api/useraccount", Userroute);
 app.use("/api/userfeedback", helpfeedback);
+// ⭐ Serve React build
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 app.listen(process.env.PORT, () => {
   console.log("server is running");
 });

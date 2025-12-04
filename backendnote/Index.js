@@ -18,7 +18,7 @@ app.use(cookieParse());
 app.use("/api/usernotes", Notesrouter);
 app.use("/api/useraccount", Userroute);
 app.use("/api/userfeedback", helpfeedback);
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server is running");
 });
 // console.log(process.env.JWT_KEY);

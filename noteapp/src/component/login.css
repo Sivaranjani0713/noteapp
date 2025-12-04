@@ -1,0 +1,45 @@
+/* @media screen and (max-width: 800px) {
+  .all {
+    width: 50%;
+  }
+} */
+@media screen and (max-width: 635px) {
+  .all {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .all {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 438px) {
+  .all {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .all {
+    width: 90%;
+    height: 50vh;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .signup {
+    width: 40%;
+    font-size: 12px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .user input {
+    height: 25px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .forget {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,221 @@
+.main {
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(155deg, #9bbaaf, #f9fdfc, #84ab9e);
+}
+.all {
+  background: #ffffff;
+  border: 0px solid rgb(246, 242, 242);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  height: 60vh;
+  width: 23%;
+  margin: auto;
+}
+h1 {
+  color: rgb(3, 108, 71);
+  font-size: 30px;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+label {
+  font-size: 18px;
+  padding: 6px;
+  font-weight: 600;
+}
+.reg-name {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(111, 111, 111);
+  color: #2d2d2d;
+}
+::placeholder {
+  font-size: 15px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.signup {
+  width: 45%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: rgb(71, 219, 157);
+  font-weight: bold;
+  color: #2d2d2d;
+}
+.signup:hover {
+  background-color: rgb(172, 248, 216);
+  color: black;
+}
+.middle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  height: 20px;
+  margin: 30px 0px;
+}
+hr {
+  border: 1px solid black;
+  height: 140px;
+  transform: rotate(90deg);
+}
+.forget {
+  font-size: 18px;
+  display: flex;
+  gap: 5px;
+  color: black;
+  align-items: center;
+}
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+}
+.nav-link:hover {
+  color: rgb(81, 82, 82);
+}
+@media screen and (max-width: 1030px) {
+  .all {
+    width: 35%;
+  }
+  .signup {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .all {
+    width: 40%;
+  }
+  .signup {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 810px) {
+  .all {
+    width: 40%;
+    height: 420px;
+  }
+  .signup {
+    width: 60%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 745px) {
+  .all {
+    width: 50%;
+  }
+  .signup {
+    width: 50%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 641px) {
+  .all {
+    width: 60%;
+  }
+  .signup {
+    width: 50%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 537px) {
+  .all {
+    width: 60%;
+  }
+  .signup {
+    width: 50%;
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .user input {
+    height: 30px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .forget {
+    font-size: 13.5px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .all {
+    width: 70%;
+  }
+  .signup {
+    width: 60%;
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .user input {
+    height: 30px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .forget {
+    font-size: 13.5px;
+  }
+}
+@media screen and (max-width: 357px) {
+  .all {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .all {
+    width: 90%;
+    margin: 40% auto;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .signup {
+    width: 60%;
+    font-size: 12px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .user input {
+    height: 30px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .forget {
+    font-size: 13.5px;
+  }
+}

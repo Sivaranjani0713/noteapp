@@ -1,0 +1,997 @@
+/* .add-btn:hover {
+  background-color: rgb(10, 10, 10);
+  color: white;
+} */
+.date-btn {
+  display: none;
+}
+.mains {
+  height: 729px;
+  /* padding: 5%; */
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* background-image: linear-gradient(
+    rgb(13, 13, 14),
+    rgb(40, 149, 239),
+    rgb(104, 183, 240),
+    rgb(169, 210, 248) 
+  ); */
+  /* background-color: #c6b8da; */
+  /* background-color: black; */
+  /* background-image: linear-gradient(190deg, #ffecd2, #fcb69f); */
+  background: linear-gradient(165deg, #f9fdfc, #ceeee3);
+  background-size: 600% 600%;
+  animation: backgrund 8s ease infinite;
+  height: 100vh;
+  /* background: linear-gradient(
+    205deg,
+    #ffd9b3,
+    #de7581,
+    #ce8eab,
+    #b291da,
+    #729bc2,
+    #85dde0
+  );
+  background-size: 600% 600%;
+  animation: backgrund 5s ease infinite; */
+}
+@keyframes backgrund {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.alls {
+  border: 0px solid black;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* dark transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.addnotes {
+  width: 16.5%;
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 50px;
+  background: #007bff;
+  /* text + icon same base color */
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addnoteicon {
+  font-size: 40px;
+  transition: inherit; /* smooth color transition same as button */
+}
+
+.addnotes:hover {
+  border: 1px solid black;
+  background: #f5f5f5;
+  color: #333; /* text + icon same hover color */
+}
+.h1 {
+  color: black;
+}
+.left-side {
+  width: 30%;
+  border: 0px solid black;
+}
+.date-dropdown {
+  display: none;
+}
+.sidebar {
+  list-style: none; /* default bullets remove */
+  width: 310px;
+  height: 100vh;
+  background: linear-gradient(135deg, #f9f9ff, #eef3ff);
+  padding: 30px;
+  border: 0px solid black;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  overflow: auto;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+/* .section h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d2d5c;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+} */
+
+/* .section li {
+  font-size: 14px;
+  color: #666;
+  margin-left: 26px;
+} */
+
+.section:hover h4 {
+  color: #3b5bdb;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* .sidebar h4 {
+
+} */
+
+.lists {
+  position: relative;
+  padding-left: 28px;
+  /* margin: auto 10px; */
+  font-size: 19px;
+  font-weight: normal;
+  /* font-size: 18px; */
+  margin: 10px 0 5px 0;
+  font-weight: normal;
+}
+
+/* Work → 💼 */
+.lists.work::before {
+  content: "💼";
+  position: absolute;
+  left: -1%;
+  top: -2%;
+  font-size: 18px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Personal → ❤️ */
+.lists.personal::before {
+  content: "❤️";
+  position: absolute;
+  left: -1%;
+  top: -2%;
+  font-size: 18px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Study → 📚 */
+.lists.study::before {
+  content: "📚";
+  position: absolute;
+  left: -1%;
+  top: -2%;
+  font-size: 18px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Idea → 💡 */
+.lists.idea::before {
+  content: "💡";
+  position: absolute;
+  left: -1%;
+  top: -2%;
+  font-size: 18px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h4 {
+  font-size: 30px;
+}
+.title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.title input {
+  padding: 10px;
+  width: 90%;
+  border-radius: 6px;
+}
+.time-date {
+  display: flex;
+  gap: 30px;
+}
+.todo-input {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 20px;
+  width: 40%;
+  height: 330px;
+  margin: 10px auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.label label {
+  font-weight: 600;
+  color: #222;
+}
+
+input,
+select {
+  width: 80%;
+  height: 40px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+  font-size: 17px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+  border-color: #7f5af0;
+  box-shadow: 0 0 6px rgba(127, 90, 240, 0.3);
+}
+input,
+option {
+  font-size: 16px;
+}
+.btns {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.add-btn {
+  margin: auto;
+  width: 25%;
+  background: rgb(67, 85, 247);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+}
+.add-btns {
+  margin: auto;
+  width: 25%;
+  background: rgb(251, 74, 74);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-btns:hover {
+  transform: scale(1.05);
+  background: rgb(251, 74, 74);
+}
+
+input::placeholder {
+  font-size: 17px;
+  padding: 10px;
+}
+.tasks-list {
+  /* text-align: center; */
+  font-weight: 600;
+  color: rgb(67, 85, 247);
+  font-size: 23px;
+}
+.task-list {
+  border: 0px solid black;
+  width: 75%;
+  height: 70vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+  background-color: #f1f2f6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  /* color: white; */
+  font-size: 20px;
+  padding: 7px;
+}
+.outer-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* width: 15%; */
+}
+.outer-btn button {
+  align-items: center;
+  width: 100%;
+  padding: 7px;
+}
+.date-time {
+  border: 0px;
+  display: flex;
+  gap: 10px;
+}
+.date-time input {
+  width: 37%;
+}
+.edit {
+  background-color: white;
+  border: 0px;
+}
+.delete {
+  background-color: white;
+  border: 0px;
+}
+.delete {
+  background-color: white;
+  border: 0px;
+}
+.icon {
+  color: #f39c12;
+  font-size: 25px;
+}
+.icons {
+  color: #293241;
+  font-size: 25px;
+}
+.icon:hover {
+  color: black;
+}
+
+.icons:hover {
+  color: rgb(67, 85, 247);
+}
+.inside-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 0px solid black;
+}
+.inside-btn button {
+  width: 100%;
+  padding: 10px;
+}
+.list input {
+  width: 100%;
+  border: 1px solid black;
+  font-size: 17px;
+  color: #1d1e2c;
+}
+.inside {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.cancel {
+  background-color: rgb(5, 126, 247);
+  border: none;
+  color: white;
+}
+.save {
+  background-color: rgb(1, 209, 1);
+  border: none;
+  color: white;
+}
+span {
+  padding: 13px;
+
+  word-break: break-word;
+}
+.note-textarea {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  resize: none; /* user drag panna kudathu */
+  overflow: hidden; /* scroll bar varakoodathu */
+}
+.para-text {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow: auto;
+}
+.notes {
+  white-space: pre-wrap; /* preserve \n new lines */
+  overflow-wrap: break-word; /* long words wrap */
+  font-size: 20px;
+  line-height: 1.2;
+}
+.reminder {
+  padding: 15px;
+  font-size: 12px;
+}
+.note-date {
+  display: flex;
+  gap: 10px;
+}
+.btn-reset {
+  border-radius: 50%;
+  background: #ef4444;
+  border: none;
+}
+.reset {
+  width: 40px;
+  height: 23px;
+  color: #fff;
+}
+.toggle-btn {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #3b82f6; /* blue background */
+  transition: all 0.3s ease;
+}
+.toggle-btn:hover {
+  background: #2563eb; /* darker blue on hover */
+}
+/* Add button style */
+.add-date {
+  color: #fff;
+  width: 40px;
+  height: 17px;
+}
+
+/* Close button style */
+.close-date {
+  color: #fff;
+  width: 40px; /* Slightly bigger */
+  height: 18px;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+.empty-state img {
+  width: 200px;
+  height: auto;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 16px;
+  font-weight: 500;
+}
+input {
+  padding: 10px;
+}
+@media screen and (max-width: 1440px) {
+  .reset {
+    width: 45px;
+    font-weight: bold;
+  }
+  .toggle-btn {
+    height: 40px;
+  }
+  .list {
+    padding: 20px;
+  }
+  .inside {
+    flex-wrap: wrap;
+    height: 150px;
+    align-items: center;
+  }
+  .inside input {
+    font-size: 20px;
+    height: 50px;
+  }
+  .note-date {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .inside-btn {
+    width: 50%;
+    height: 40px;
+  }
+  .inside-btn button {
+    font-size: 20px;
+  }
+  .alls {
+    margin: 10% auto;
+  }
+  .addnotes {
+    width: 24%;
+  }
+}
+@media screen and (max-width: 1055px) {
+  .left-side {
+    width: 35%;
+  }
+  .alls {
+    width: 90%;
+    margin: 10% auto;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .addnotes {
+    width: 32%;
+  }
+  .task-list {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 791px) {
+  .inside input {
+    height: 40px;
+    font-size: 17px;
+  }
+  .list input {
+    width: 85%;
+  }
+  .inside {
+    height: 140px;
+  }
+  .inside-btn {
+    width: 45%;
+    height: 30px;
+  }
+  .inside-btn button {
+    font-size: 14px;
+  }
+  .note-date {
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar {
+    width: 240px;
+  }
+  .addnotes {
+    width: 32%;
+    font-size: 15px;
+    height: 55px;
+    right: 16%;
+  }
+  .icons,
+  .icon {
+    font-size: 20px;
+  }
+  .reminder {
+    font-size: 10px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+  .lists {
+    font-size: 17px;
+  }
+  .lists.work::before {
+    font-size: 15px;
+    top: -15%;
+  }
+}
+@media screen and (max-width: 634px) {
+  .addnotes {
+    width: 30%;
+    font-size: 13px;
+    height: 45px;
+  }
+  .addnoteicon {
+    font-size: 30px;
+  }
+  .sidebar {
+    width: 210px;
+  }
+  .alls {
+    width: 100%;
+  }
+  .reminder {
+    font-size: 9px;
+    color: gray;
+    padding: 10px;
+  }
+  .notes {
+    font-size: 17px;
+    padding: 10px;
+  }
+  h4 {
+    font-size: 23px;
+  }
+  .lists {
+    font-size: 14px;
+  }
+  .lists.work::before {
+    font-size: 16px;
+    top: -20%;
+  }
+}
+@media screen and (max-width: 589px) {
+  .sidebar {
+    display: none;
+  }
+  .date-dropdown {
+    display: inline-block;
+    background: #a6e2c8; /* light neat bg */
+    padding: 20px 30px;
+    width: 220px;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    overflow-x: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .closes {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    font-size: 25px;
+    color: black;
+    z-index: 99;
+  }
+  .date-dropdown h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 18px 0 10px;
+    color: #0f172a;
+  }
+
+  /* section gap */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+    padding-left: 4px;
+  }
+
+  /* list style */
+  .lists {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #374151;
+  }
+
+  /* icons */
+  .folder-icon {
+    color: #8b5cf6;
+    font-size: 16px;
+  }
+  .idea-icon {
+    color: #f59e0b;
+    font-size: 16px;
+  }
+  .heart-icon {
+    color: #ef4444;
+    font-size: 16px;
+  }
+  .left-side {
+    width: 0;
+  }
+  .mains {
+    position: relative;
+  }
+  .date-btn {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    font-size: 22px;
+    margin: 2% 3%;
+    border-radius: 12px;
+  }
+  .reminder {
+    padding: 9px;
+  }
+  .icons,
+  .icon {
+    font-size: 18px;
+  }
+  .notes {
+    padding: 8px;
+  }
+  .addnotes {
+    width: 35%;
+    right: 32%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 503px) {
+  .addnotes {
+    width: 42%;
+    right: 25%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .inside-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .add-date {
+    padding: 7px;
+    height: 30px;
+  }
+  .inside-btn {
+    width: 90%;
+  }
+  .inside input {
+    width: 82%;
+    height: 30px;
+  }
+  .list input {
+    padding: 5px;
+  }
+  .reset,
+  .close-date {
+    width: 30px;
+    height: 25px;
+    padding: 5px;
+  }
+  .toggle-btn {
+    height: 30px;
+  }
+  .note-date {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .inside {
+    flex-wrap: wrap;
+  }
+  .addnotes {
+    width: 43%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .inside-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .add-date {
+    padding: 7px;
+    height: 30px;
+  }
+  .inside-btn {
+    width: 80%;
+  }
+  .list input {
+    padding: 5px;
+    width: 83%;
+  }
+  .reset,
+  .close-date {
+    width: 30px;
+    height: 25px;
+    padding: 5px;
+  }
+  .toggle-btn {
+    height: 30px;
+  }
+  .note-date {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .inside {
+    flex-wrap: wrap;
+    height: 140px;
+  }
+  .addnotes {
+    width: 50%;
+    right: 20%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .inside-btn {
+    width: 100%;
+  }
+  .list input {
+    padding: 5px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 358px) {
+  .inside-btn {
+    width: 100%;
+  }
+  .list input {
+    padding: 5px;
+    width: 80%;
+  }
+  .addnotes {
+    width: 55%;
+    right: 20%;
+    font-size: 12.5px;
+  }
+}
+@media screen and (max-width: 322px) {
+  .inside-btn {
+    width: 100%;
+  }
+  .list input {
+    padding: 5px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .todo-input {
+    width: 60%;
+  }
+}
+
+/* 1040px */
+@media screen and (max-width: 1040px) {
+  .todo-input {
+    width: 65%;
+  }
+}
+
+/* 791px */
+@media screen and (max-width: 791px) {
+  .todo-input {
+    width: 70%;
+  }
+}
+
+/* 634px */
+@media screen and (max-width: 634px) {
+  .todo-input {
+    width: 80%;
+  }
+}
+
+/* 589px */
+@media screen and (max-width: 589px) {
+  .todo-input {
+    width: 85%;
+  }
+  .add-btn,
+  .add-btns {
+    width: 30%;
+  }
+}
+
+/* 503px */
+@media screen and (max-width: 503px) {
+  .todo-input {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* 450px */
+@media screen and (max-width: 450px) {
+  .todo-input {
+    width: 95%;
+    padding: 12px;
+  }
+  .btns {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+  }
+  .add-btn,
+  .add-btns {
+    width: 30%;
+  }
+}
+
+/* 420px */
+@media screen and (max-width: 420px) {
+  .todo-input {
+    width: 90%;
+    margin: 0 10px;
+  }
+  .date-time {
+    gap: 0px;
+  }
+  .add-btn,
+  .add-btns {
+    width: 40%;
+  }
+  label {
+    font-size: 12px;
+  }
+}
+
+/* 358px */
+@media screen and (max-width: 358px) {
+  .todo-input {
+    padding: 20px;
+    height: 280px;
+  }
+  label {
+    font-size: 10px;
+  }
+  .input,
+  .note-textarea {
+    font-size: 14px;
+    height: 30px;
+  }
+  .input,
+  select {
+    height: 25px;
+  }
+  .add-btn,
+  .add-btns {
+    width: 50%;
+  }
+}

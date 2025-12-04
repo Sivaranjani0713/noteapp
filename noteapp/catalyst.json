@@ -1,0 +1,6 @@
+{
+  "client": {
+    "source": "noteapplication",
+    "plugin": "zcatalyst-cli-plugin-react"
+  }
+}
